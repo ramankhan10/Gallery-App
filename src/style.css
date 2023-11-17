@@ -10,6 +10,7 @@ body {
 .gallery {
     width: 600px;
 }
+
 .gallery::-webkit-scrollbar {
     display: none;
 }
@@ -20,4 +21,19 @@ body {
 
 .gallery-img {
     width: 200px;
+    filter: grayscale(1);
+
+    transition: transform 0.5s;
+}
+
+.gallery-img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#backBtn,
+#nextBtn {
+    width: 50px;
+    cursor: pointer;
 }
